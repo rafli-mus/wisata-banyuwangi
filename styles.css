@@ -965,3 +965,13 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+@media (max-width: 768px) {
+  .logo {
+    font-size: 18px;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block; /* penting untuk ellipsis */
+  }
+}
