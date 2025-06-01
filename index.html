@@ -171,15 +171,6 @@
       <button type="submit" class="btn-submit">Kirim</button>
     </form>
   </div>
-  <div id="listTestimoni" class="testimoni-list scroll-box">
-  <!-- isi testimoni tetap -->
-</div>
-
-<div id="saranContainer" class="saran-list scroll-box">
-  <h3></h3>
-  <!-- saran dari user -->
-</div>
-
 </section>
 
   </main>
@@ -273,7 +264,11 @@
     `;
 
     // Tambahkan ke list testimoni
-    listTestimoni.appendChild(testimoniBaru);
+    listTestimoni.insertBefore(testimoniBaru, listTestimoni.firstChild);
+    if (listTestimoni.children.length > 4) {
+  listTestimoni.removeChild(listTestimoni.children[0]);
+}
+
 
     // Reset form
     formKritik.reset();
